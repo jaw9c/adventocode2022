@@ -23,11 +23,14 @@ test_input = [
 
 
 def doit(input):
-    return reduce(
-        lambda acc, xs: (max(*acc), 0) if xs == "" else (acc[0], acc[1] + int(xs)),
+    totals, other = reduce(
+        lambda acc, x: (acc[0] + [acc[1]], 0) if x == "" else (acc[0], acc[1] + int(x)),
         input,
-        (0, 0),
-    )[0]
+        ([], 0),
+    )
+    totals += [other]
+    totals.sort()
+    return sum(totals[-3:])
 
 
 if __name__ == "__main__":
