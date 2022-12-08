@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-#!/usr/bin/python3
 from utils import *
 
 input = load_input_as_list()

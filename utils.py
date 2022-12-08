@@ -2,9 +2,13 @@
 import sys
 
 
-def load_input_as_list():
+def load_input():
     with open(sys.argv[1]) as f:
-        return f.read().split("\n")
+        return f.read()
+
+
+def load_input_as_list():
+    return load_input().split("\n")
 
 
 def load_input_as_ints():

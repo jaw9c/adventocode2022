@@ -1,2 +1,4 @@
 *.pyc
 *.input
+.vscode
+.DS_Store
