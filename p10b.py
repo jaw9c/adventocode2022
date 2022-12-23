@@ -16,7 +16,7 @@ def doit(instrs):
             log.append(X)
             X += value
             log.append(X)
-     
+
     new_log = ""
     for i, val in enumerate(log):
         if i % 40 == val or i % 40 + 1 == val or i % 40 - 1 == val:
